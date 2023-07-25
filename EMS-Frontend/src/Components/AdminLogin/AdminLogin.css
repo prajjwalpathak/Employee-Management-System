@@ -1,0 +1,103 @@
+.signIn-container {
+	height: 100vh;
+	padding: 4rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+}
+.signin-wrapper {
+	background-color: #ffffff;
+	width: 90%;
+	border-radius: 8px;
+	height: 692px;
+}
+
+.right {
+	padding: 2rem 0;
+}
+
+#form {
+	padding: 1rem;
+}
+
+.signin-title {
+	padding: 1.3rem 0;
+	font-size: 2.4rem;
+	color: #090a0a;
+}
+
+div.field {
+	display: flex;
+	flex-direction: column;
+}
+.label {
+	padding: 0.8rem 0;
+	color: #1b1a1a;
+}
+
+#fullname,
+#email,
+#password,
+#designation,
+#department,
+#confirmpassword {
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	padding: 0.8rem;
+	width: 100%;
+	background-color: #f8fafc;
+	border: 1px solid #c9cad2;
+}
+
+.last {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.3rem 0;
+	flex-wrap: wrap;
+}
+
+.left-image {
+	display: none;
+}
+
+@media screen and (min-width: 480px) and (max-width: 911px) {
+	.signin-wrapper {
+		width: 420px;
+	}
+}
+
+@media screen and (min-width: 912px) {
+	.signin-wrapper {
+		display: flex;
+		width: 1024px;
+		height: 540px;
+		justify-content: space-between;
+	}
+	.left {
+		flex: 1;
+	}
+
+	.left-image {
+		display: block;
+	}
+	.right {
+		flex: 1;
+		padding: 0 2rem;
+	}
+	#form {
+		padding: 0 1rem;
+	}
+}
+
+.nameError {
+	color: #ff0000;
+	font-size: 0.7rem;
+	padding-top: 0.3rem;
+}
+
+input::placeholder {
+	color: rgb(0, 0, 0);
+}

@@ -1,0 +1,47 @@
+.timesheets-div {
+	width: 100%;
+	height: 100%;
+}
+
+.timesheets-heading {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.timesheets-range-input-heading {
+	margin: 2rem 0 0 1rem;
+}
+
+.timesheets-range-input {
+	margin: 1rem;
+}
+
+.admin-timesheets-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.admin-timesheets-table {
+	width: 100%;
+	margin: 1rem;
+}
+
+.admin-timesheets-table-row {
+	height: 1.4rem;
+	border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.employee-profile-image {
+	width: 2rem;
+	height: 2rem;
+}
+
+.table-heading {
+	padding: 1rem;
+	font-weight: 500;
+}
+
+.span-margin {
+	margin-left: 1rem;
+}

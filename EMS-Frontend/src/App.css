@@ -1,0 +1,33 @@
+.modal-item{
+display: flex !important;
+justify-content: center;
+background-color: rgba(87, 116, 255, 0.3);
+
+}
+
+.modal-content{
+    margin-top: 6rem;
+    width: 360px !important;
+    height: 150px  !important;
+    padding: 1.5rem;
+    /* background: rgb(211,224,253);
+    background: linear-gradient(90deg, rgba(211,224,253,1) 0%, rgba(251,254,255,1) 100%);  */
+    background: #F7F9FB;
+
+}
+
+.p-dialog-header-icon{
+border: none;
+padding: 0.3rem 0.6rem;
+position: absolute;
+right: 0;
+}
+
+.h6{
+    margin-bottom: 0 !important;
+
+}
+
+
+
+

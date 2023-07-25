@@ -1,0 +1,33 @@
+.dropdown-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 20%;
+	height: 6rem;
+	top: 128%;
+	right: 0;
+	background-color: #ffffff;
+	border-left: 1px solid rgb(222, 222, 222);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.logout-btn {
+	padding: 0.3rem 0.6rem;
+	border: none;
+	outline: none;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.logout-btn:hover {
+	box-shadow: 0 0 6px rgba(255, 0, 0, 0.7);
+	color: rgb(150, 0, 0);
+}
+.logout-icon {
+	margin-left: 0.6rem;
+}

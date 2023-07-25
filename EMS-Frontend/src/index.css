@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&family=Poppins:wght@100;200;300;400;500&display=swap');
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+  
+}
+
+#root {
+  position: relative;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #SignIn {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+}

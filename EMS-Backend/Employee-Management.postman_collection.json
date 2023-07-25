@@ -1,0 +1,1814 @@
+{
+	"info": {
+		"_postman_id": "7a315813-2122-4f26-8e40-7c149cfda250",
+		"name": "Employee-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26840268",
+		"_collection_link": "https://gold-meteor-306957.postman.co/workspace/Team-Workspace~ef0c0a29-75a3-49fe-8e55-1b007bf11864/collection/26840268-7a315813-2122-4f26-8e40-7c149cfda250?action=share&creator=26840268&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "super-admin-add-admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hrmid",
+							"value": "HRM877",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Sahil Bagwan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sahil.bagwan@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9876543210",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "App Development",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/super-admin/add-admin",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"super-admin",
+						"add-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-signup",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Sahil Bagwan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sahil.bagwan@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin-signup",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin-signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"server\", \"https://8fb5-117-242-153-226.ngrok-free.app\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "sahil.bagwan@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin-login",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-upload-user-details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csvFile",
+							"type": "file",
+							"src": "/D:/Employee-Management/DUMMY_DATA.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin/upload-user-details",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"upload-user-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-add-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hrmid",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "joiningDate",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "reportingManager",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "reportsTo",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin/add-user",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"add-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-add-project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "projectName",
+							"value": "Employee Management",
+							"type": "text"
+						},
+						{
+							"key": "clientName",
+							"value": "Celebal Technologies",
+							"type": "text"
+						},
+						{
+							"key": "assignedOn",
+							"value": "2023-05-01",
+							"type": "text"
+						},
+						{
+							"key": "completeBy",
+							"value": "2023-05-01",
+							"type": "text"
+						},
+						{
+							"key": "teamHead",
+							"value": "deepak.sogani@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "teamMembers",
+							"value": "rahul.jangid@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "App Development",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin/projects/add-project",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"projects",
+						"add-project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-update-user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin/update-user",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-update-project",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "projectName",
+							"value": "Dashboard",
+							"type": "text"
+						},
+						{
+							"key": "completeBy",
+							"value": "2023-05-01",
+							"type": "text"
+						},
+						{
+							"key": "teamHead",
+							"value": "deepak.sogani@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "teamMembers",
+							"value": "shashank.varshney@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "department",
+							"value": "App Development",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Active",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin/projects/update-project",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"projects",
+						"update-project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/admin/get-users",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"get-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-projects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/admin/projects/get-projects",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"projects",
+						"get-projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/admin/projects/get-project?projectId=11",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"projects",
+						"get-project"
+					],
+					"query": [
+						{
+							"key": "projectId",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-admin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/admin/get-admin",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"get-admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-all-users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/admin/get-all-users",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"get-all-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-searched-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/admin/get-searched-user?userId=10005",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"get-searched-user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "10005"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-user-skills",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/admin/get-user-skills?userId=10005",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"get-user-skills"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "10005"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-range-requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/admin/requests/get-range-requests?startDate=2023-06-01&endDate=2023-06-30",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"requests",
+						"get-range-requests"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2023-06-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-06-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-range-timesheets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/admin/timesheets/get-range-timesheets?startDate=2023-06-01&endDate=2023-06-30",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"timesheets",
+						"get-range-timesheets"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2023-06-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-06-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-get-hierarchy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/admin/get-hierarchy?userId=10005",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"get-hierarchy"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "10005"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-delete-project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "projectId",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/admin/projects/delete-project",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"projects",
+						"delete-project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/admin/logout",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"admin",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-signup",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Rahul Jangid",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rahul.jangid@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/signup",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-login",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"server\", \"https://8fb5-117-242-153-226.ngrok-free.app\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "karuna.yadav@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-check-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "checkInTime",
+							"value": "10:00",
+							"type": "text"
+						},
+						{
+							"key": "checkInDate",
+							"value": "2023-04-01",
+							"type": "text"
+						},
+						{
+							"key": "checkInLocation",
+							"value": "location",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/check-in",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"check-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-add-user-request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "karuna.yadav@celebaltech.com",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "2023-06-15",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-06-15",
+							"type": "text"
+						},
+						{
+							"key": "leaveType",
+							"value": "Full Day",
+							"type": "text"
+						},
+						{
+							"key": "request",
+							"value": "Casual Leave",
+							"type": "text"
+						},
+						{
+							"key": "reason",
+							"value": "Exam",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/requests/add-user-request",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"requests",
+						"add-user-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-add-user-timesheet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "timesheetName",
+							"value": "Timesheet",
+							"type": "text"
+						},
+						{
+							"key": "clientName",
+							"value": "client_name",
+							"type": "text"
+						},
+						{
+							"key": "projectName",
+							"value": "project_name",
+							"type": "text"
+						},
+						{
+							"key": "jobName",
+							"value": "job_name",
+							"type": "text"
+						},
+						{
+							"key": "workItem",
+							"value": "work_item",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2023-05-01",
+							"type": "text"
+						},
+						{
+							"key": "totalTime",
+							"value": "09:00",
+							"type": "text"
+						},
+						{
+							"key": "billableStatus",
+							"value": "Non-billable",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "description",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/timesheets/add-user-timesheet",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"timesheets",
+						"add-user-timesheet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-resend-user-request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "10003",
+							"type": "text"
+						},
+						{
+							"key": "requestId",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/requests/resend-user-request",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"requests",
+						"resend-user-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-check-out",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "checkOutTime",
+							"value": "19:00",
+							"type": "text"
+						},
+						{
+							"key": "checkOutDate",
+							"value": "2023-04-01",
+							"type": "text"
+						},
+						{
+							"key": "checkOutLocation",
+							"value": "location",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/check-out",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"check-out"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-profile-details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "permanentAddress",
+							"value": "permanent_address",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "city",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "state",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "country",
+							"type": "text"
+						},
+						{
+							"key": "emergencyPhone",
+							"value": "1234567890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/account/update-user-profile-details",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"account",
+						"update-user-profile-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-profile-image",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "profileImage",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/account/update-user-profile-image",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"account",
+						"update-user-profile-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "requestId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/requests/update-user-request",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"requests",
+						"update-user-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-subordinate-request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "10003",
+							"type": "text"
+						},
+						{
+							"key": "requestId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Approve",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/requests/update-user-subordinate-request",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"requests",
+						"update-user-subordinate-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-subordinate-timesheet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "10003",
+							"type": "text"
+						},
+						{
+							"key": "timesheetId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Approve",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/timesheets/update-user-subordinate-timesheet",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"timesheets",
+						"update-user-subordinate-timesheet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-skills",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "primarySkills",
+							"value": "skill_1, skill_2, skill_3",
+							"type": "text"
+						},
+						{
+							"key": "secondarySkills",
+							"value": "skill_1, skill_2, skill_3",
+							"type": "text"
+						},
+						{
+							"key": "certifications",
+							"value": "certification_1, certification_2, certification_3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/skills/update-user-skills",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"skills",
+						"update-user-skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-notification",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "notificationId",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/update-user-notification",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"update-user-notification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-update-user-all-notifications",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hrmid",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}/user/update-user-all-notifications",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"update-user-all-notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/get-user",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-all-users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/get-all-users",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"get-all-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-searched-user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/get-searched-user?userId=10001",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"get-searched-user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "10001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/account/get-user-profile",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"account",
+						"get-user-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-skills",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/skills/get-user-skills",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"skills",
+						"get-user-skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-attendance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/get-user-attendance",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"get-user-attendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-current-attendance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/get-user-current-attendance",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"get-user-current-attendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-requests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/requests/get-user-requests",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"requests",
+						"get-user-requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-available-requests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/requests/get-user-available-requests",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"requests",
+						"get-user-available-requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-subordinates-requests",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/requests/get-user-subordinates-requests",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"requests",
+						"get-user-subordinates-requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-timesheets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/timesheets/get-user-timesheets",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"timesheets",
+						"get-user-timesheets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-weekly-timesheets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/timesheets/get-user-weekly-timesheets?week=30-04-2023 - 06-05-2023",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"timesheets",
+						"get-user-weekly-timesheets"
+					],
+					"query": [
+						{
+							"key": "week",
+							"value": "30-04-2023 - 06-05-2023"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-subordinates-timesheets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/timesheets/get-user-subordinates-timesheets",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"timesheets",
+						"get-user-subordinates-timesheets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-projects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/projects/get-user-projects",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"projects",
+						"get-user-projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/user/projects/get-project?projectId=1",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"projects",
+						"get-project"
+					],
+					"query": [
+						{
+							"key": "projectId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-projects-minimal-data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/projects/get-user-projects-minimal-data",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"projects",
+						"get-user-projects-minimal-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-get-user-heirarchy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/get-user-hierarchy?userId=10005",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"get-user-hierarchy"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "10005"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{server}}/user/logout",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.globals.set(\"server\", \"http://localhost:5000\");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

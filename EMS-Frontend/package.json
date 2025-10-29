@@ -33,7 +33,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.2",
     "socket.io": "^4.8.1",
-    "socket.io-client": "^4.6.1",
+    "socket.io-client": "^4.8.1",
     "use-history": "^1.4.1",
     "web-vitals": "^2.1.4",
     "workerize-loader": "^2.0.2",
